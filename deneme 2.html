@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD WEBSİTESİ</title>
+
+    <style>
+        :root{
+            --backgroundclrdark: #181818;
+            --ButtonAndBlur:red;
+            
+        }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    
+        *{
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            margin:0;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+        }
+
+    html{
+        background-color: var(--backgroundclrdark);
+    }
+    nav{
+    
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem 1rem;
+      
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-left:200px ;
+        
+        gap: 3rem;
+        
+    }
+    .btn{
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: var(--ButtonAndBlur);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .btn:hover{
+        background-color: #af1e1e;
+    }
+    .linkler a{
+        padding-bottom: 0,75rem ;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+    }
+    .linkler{
+        font-size: 1.2rem;
+        position: relative;
+        padding-bottom: 0.75rem;
+        cursor: pointer;
+      
+
+    }
+    .linkler::after{
+        content: "";
+       
+        position: absolute;
+        bottom: 10px;
+        left: 0px;
+        width: 0px;
+        height: 2px;
+        background-color: red;
+        transition: all 0.5s;
+
+    }
+    
+    .linkler:hover::after{
+        width: 80%;
+    }
+
+.header{
+    padding: 5rem 2rem;
+}
+    
+ 
+ .content{
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+
+ }
+.content h1{
+    max-width: 5000px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.content span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    font-size: 4.2rem;
+    font-weight: 700;
+}
+.content p{
+    font-family: 'Poppins', sans-serif;
+    color: #cacaca;
+    font-weight: 200;
+    max-width: 500px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.image{
+    position: relative;
+    top: 20px;
+    left: 60px;
+    scale: 1.2;
+    
+    width: 400px;
+    height: 400px;
+
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(circle,rgb(0, 0, 0) 25%,rgba(255, 255, 0, 0) 70%);
+ 
+    -webkit-mask-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+#resim{
+    position:absolute;
+    top: -460px;
+    left: -680px;
+    scale: 0.7;
+    
+    animation-name: me-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+ }
+ @keyframes me-animation{
+    30%{opacity: 0.7; }
+    80%{opacity: 1; filter: brightness(1.4);}
+    
+ }
+.blur{
+    position:absolute;
+    box-shadow: 0 0 1000px 80px var(--ButtonAndBlur);
+    z-index: -100;
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav-bar">
+    <ul>
+        <li class="linkler"><a href="">Ana sayfa</a></li>
+        <li class="linkler"><a href="">Hakkımda</a></li>
+        <li class="linkler"><a href="">Projeler</a></li>
+        
+    </ul>
+    <button class="btn">Ahmeti Sik</button>
+</nav>
+<header class="header">
+    <div class="content">
+        <div class="text"> 
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h1>Merhaba ben <span>Bilal</span>, <br>Ahmet siken <span>Bilal</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Non perspiciatis facilis velit tenetur temporibus dignissimos,
+                doloremque voluptatibus tempore debitis voluptatem nesciunt explicabo 
+                consequuntur saepe quibusdam expedita exercitationem blanditiis veniam minus 
+                quas. Quos libero ipsum, eligendi rem hic enim? Debitis delectus non, 
+                repudiandae praesentium veritatis eum magni quam quas illum reiciendis!</p>
+            </div>
+
+            <div class="image">
+                <img id="resim" src="resimler/me.jpg" alt="">
+            </div>
+
+        </div>
+        
+</header>
+  
+    
+    
+</body>
+</html>
